@@ -17,6 +17,12 @@ Competition::Competition(string name, string type,
 	this->deviation = deviation;
 }
 
+Competition::~Competition() {
+	for (int i = 0; i < students.size(); i++) {
+		delete students[i];
+	}
+}
+
 void Competition::print(){
 	std::cout << "Name: " << name << "Type: " << type 
 		<< "\nDate: " << date.day << "/" << date.month << "/" << date.year << std::endl;
