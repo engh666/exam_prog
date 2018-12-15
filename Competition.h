@@ -69,6 +69,7 @@ private:
 public:
 	Competition(string name, string type, vector<string> skills, vector<int> weights,
 		Date *date, int deviation);
+	~Competition();
 	void print();
 	Date getDate();
 	void compete();
