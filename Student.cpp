@@ -12,6 +12,12 @@ Student::Student(std::string name, std::string surname, std::vector<int> skills,
 	}
 }
 
+Student::~Student() {
+	for (int i = 0; i < skills.size(); i++) {
+		delete skills[i];
+	}
+}
+
 void Student::print() {
 	std::cout << "\tName: " << name << " Surname: " << surname << std::endl;
 	for (size_t i = 0; i < skills.size(); i++) {
