@@ -12,6 +12,7 @@ private:
 	int experience; // coef of exp
 public:
 	Student(std::string name, std::string surname, std::vector<int> skills, int fear);
+	~Student();
 	void print();
 	void addSkill(Skill *newSkill);
 	int getLevelOfSkill(std::string skillName);
