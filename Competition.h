@@ -17,9 +17,24 @@ public:
 			this->year = 1980;
 		}
 		Date(int day, int month, int year) {
-			this->day = day;
-			this->month = month;
-			this->year = year;
+			if(month > 12 || month < 0){
+				this->day = 1;
+			}
+			else{
+				this->day = day;
+			}
+			if(month > 12 || month < 0){
+				this->month = 1;
+			}
+			else{
+				this->month = month;
+			}
+			if(year > 2018 || year < 1980){
+				this->year = 2018;
+			}
+			else {
+				this->year = year;
+			}
 		}
 
 		bool operator<(Date right) {
